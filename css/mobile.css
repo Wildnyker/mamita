@@ -1,0 +1,33 @@
+#who div{
+    height: 50vh;
+}
+
+
+#what .items{
+    display: block;
+    padding: 0.5rem;
+}
+
+#what .items .item {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+#what h2{
+    display: none;
+}
+
+
+#who{
+    flex-direction: column;
+}
+
+#who .who-image{
+    min-height: 50vh;
+}
+
+

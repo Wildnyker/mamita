@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,300;1,500;1,700&display=swap');
+/*add font roboto*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 18px;
+}
+
+body{
+    font-family: "Roboto",sans-serif;
+    line-height: 1.4;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+/*top-botom 0.75, left-right - 0*/
+/*1 rem by default is 16 px*/
+
+/*UTILIY*/
+
+.text-primary{
+    /*all elements with this class will have this text colour*/
+    color: #8338ec;
+}
+
+.text-secondary{
+    /*all elements with this class will have this text colour*/
+    color: #8338ec;
+}
+
+.text-third{
+    color: #1dafd1;
+}
+
+.text-forth{
+    color: #FFFFFF;
+}
+
+
+
+.btn{
+    display: inline-block;
+    color:white;
+    background: #8338ec;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    border: none;
+}
+
+.btn:hover {
+    background: #1dafd1;
+    box-shadow: 3px 3px 3px #8338ec;
+}
+
+btn-2{
+    display: inline-block;
+    color:white;
+    background: #8338ec;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    border: none;
+}
+
+
+.lead{
+    font-size: 1.4rem;
+    margin-bottom: 1.7rem;
+}
+
+.bg-light{
+    /*background: white;*/
+    color: #fff;
+}
+
+
+.list{
+    list-style: none;
+}
+
+.list li{
+    padding: 1rem 0;
+
+
+}
+
+/*changes properties of who section heading*/
+.m-heading{
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.l-heading{
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+/*adds padding in Who section*/
+.p-2{
+    padding: 2rem;
+}
+
+
+
+/*NAVBAR*/
+
+#navbar{
+    display: flex;
+    position: sticky;
+    top:0;
+    background: #10bce4;
+    color: #ffffff;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 0.75rem;
+}
+
+/*color here will change color to any text except links and other defined elements*/
+/*position sticky speaks for itself*/
+/*top 0 shows where to stick*/
+/*justify-content: space-between; pushes elements of navbar to sides*/
+/*z-index - makes navbar(or any element to cover other elements)
+if some element would have z-index:2 it would cover this one*/
+
+#navbar ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+/*list-style: none; - removes list styling*/
+/*align-items: flex-end; moves items to the bottom of container on y axis*/
+
+#navbar li a{
+    color: #fff;
+    padding: 0.4rem;
+    margin: 0 0.25rem;
+}
+
+#navbar ul li a:hover{
+    background: #1dafd1;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #8338ec;
+}
+
+/*HEADER*/
+
+#showcase{
+    background: #333 url('../img/untitled.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: #ffffff;
+    text-shadow: 0.5px 0.5px 0.5px black;
+}
+
+#showcase .showcase-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /*sets div height to 100% of section*/
+    position: absolute;
+    top: 70px;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.1 );
+}
+
+/*WHO*/
+
+
+#who{
+    display: flex;
+}
+
+#who div{
+    flex:1;
+}
+
+#who .who-image{
+    background-image: url("../img/who-0.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background: url("../img/who-3.jpg") no-repeat center center/cover;*/
+    min-width: 50%;
+    animation: change 15s infinite ease-in-out;
+}
+
+@keyframes change {
+    0%{background-image: url("../img/who-1.jpg"), url("../img/who-2.jpg")}
+    25%{background-image: url("../img/who-2.jpg"), url("../img/who-3.jpg")}
+    50%{background-image: url("../img/who-3.jpg"), url("../img/who-0.jpg")}
+    75%{background-image: url("../img/who-0.jpg"), url("../img/who-1.jpg")}
+    100%{background-image: url("../img/who-1.jpg"), url("../img/who-2.jpg")}
+
+}
+
+#who .who-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#who #dropdown{
+    cursor: pointer;
+}
+
+#who #dropdown .dropdown-span:hover {
+    color: #FFFFFF;
+    background: #1dafd1;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #8338ec;
+    padding: 0.3rem;
+}
+
+
+/*WHAT*/
+
+#what{
+    background-color: #8338ec;
+}
+
+#what .items{
+    display: flex;
+    justify-content: space-around;
+    color: #ffffff;
+    flex: 1;}
+
+#what .items .item{
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+
+/*CONTACT*/
+
+#contact{
+    display: flex;
+    color: #1dafd1;
+    background-color: #FFFFFF;
+    height: 40vh;
+}
+
+#contact a{
+    color: #1dafd1;
+}
+
+
+#contact div{
+    flex: 1;
+}
+
+#contact-p{
+    width: 100%;
+}
+
+#contact .where-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+#contact .contact-img{
+    background: url("../img/map.jpg") no-repeat center center/cover;
+    min-width: 50%;
+}
+
+#contact #map {
+ min-width: 50%;
+}
+
+
+#contact .btn-2{
+    display: inline-block;
+    background: #1dafd1;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    color: white;
+}
+
+#contact .btn-2:hover {
+    background: #8338ec;
+    box-shadow: 3px 3px 3px #1dafd1;
+}
+
+#contact .insta:hover{
+    background:#8338ec;
+    border-radius: 3px;
+    padding: 0.1rem 0.1rem;
+
+}
+#contact .tele:hover{
+    background:#8338ec;
+    border-radius: 3px;
+    padding: 0.1rem 0.1rem;
+
+}
+
+/*SUGGESTIONS*/
+#suggestions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*FOOTER*/
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container p{
+    color: white;
+    font-size: 0.5rem;
+}
+
+h4{
+    font-size: 0.5rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
